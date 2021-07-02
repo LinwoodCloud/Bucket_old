@@ -2,108 +2,104 @@ import React, { PropsWithChildren, ReactElement, ReactNode } from 'react';
 import {
   Box,
   Flex,
-  Avatar,
   HStack,
   Link,
   IconButton,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
   useDisclosure,
   Text,
   useColorModeValue,
   Stack,
-  Tooltip
+  Tooltip,
+  useColorMode,
+  Switch,
+  FormControl,
+  FormLabel,
+  VStack
 } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon, ChevronDownIcon } from '@chakra-ui/icons';
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import Image from 'next/image';
 import { House, Bag, User, Bell, Code, Cube } from 'phosphor-react';
 import { useRouter } from 'next/router'
+import { Sun, Moon } from 'phosphor-react';
 
 
 interface BucketLink {
-    title : string;
-    icon : ReactNode;
-    href: string;
+  title: string;
+  icon: ReactNode;
+  href: string;
+}
+
+const Links: BucketLink[] = [
+  {
+    "title": "Home",
+    "icon": (<House size={24} />),
+    "href": "/"
+  },
+  {
+    "title": "Assets",
+    "icon": (<Cube size={24} />),
+    "href": "/assets"
+  },
+  {
+    "title": "Collections",
+    "icon": (<Bag size={24} />),
+    "href": "/collections"
+  },
+  {
+    "title": "Authors",
+    "icon": (<User size={24} />),
+    "href": "/authors"
+  },
+  {
+    "title": "Notifications",
+    "icon": (<Bell size={24} />),
+    "href": "/notifications"
   }
-  
-  const Links : BucketLink[] = [
-    {
-      "title": "Home",
-      "icon": (<House size={24} />),
-      "href": "/"
-    },
-    {
-      "title": "Assets",
-      "icon": (<Cube size={24} />),
-      "href": "/assets"
-    },
-    {
-      "title": "Collections",
-      "icon": (<Bag size={24} />),
-      "href": "/collections"
-    },
-    {
-      "title": "Authors",
-      "icon": (<User size={24} />),
-      "href": "/authors"
-    },
-    {
-      "title": "Notifications",
-      "icon": (<Bell size={24} />),
-      "href": "/notifications"
-    },
-    {
-      "title": "Source",
-      "icon": (<Code size={24} />),
-      "href": "https://github.com/LinwoodCloud/Bucket"
-    }
-  ];
-  const NavLink = ({ link }: { link: BucketLink }): ReactElement => {
-    const selectedBg = useColorModeValue('gray.200', 'gray.700');
-    const router = useRouter();
-    return (
-      <Link
-        px={3}
-        py={1}
-        rounded={'md'}
-        _hover={{
-          textDecoration: 'none',
-          bg: selectedBg,
-        }}
-        backgroundColor={router.pathname == link.href ? selectedBg : null}
-        display="flex"
-        href={link.href}>
-        <HStack spacing={2}>{link.icon}<Text>{link.title}</Text></HStack>
-      </Link>
-    );
-  };
-export default function BucketNavigation({children} : PropsWithChildren<{}>): ReactElement {
-    const { isOpen, onOpen, onClose } = useDisclosure();
-  
-    return (
-        <>
-        <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
-          <Flex h={16} alignItems={'center'} justifyContent={'stretch'}>
-            <IconButton
-              size={'md'}
-              icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-              aria-label={'Open Menu'}
-              display={{ md: 'none' }}
-              onClick={isOpen ? onClose : onOpen}
-            />
-            <HStack spacing={8} width="100%">
-              <Tooltip label="Linwood Bucket">
-                <Link href="/">
-                  <Box p={5}>
-                    <Image src="/logo.png" alt="Picture of the author" height={24} width={24} />
-                  </Box>
-                </Link>
-              </Tooltip>
-              <Box flexGrow={1}>
+];
+const NavLink = ({ link }: { link: BucketLink }): ReactElement => {
+  const selectedBg = useColorModeValue('gray.200', 'gray.700');
+  const router = useRouter();
+  return (
+    <Link
+      justifyContent="center"
+      px={3}
+      py={1}
+      rounded={'md'}
+      _hover={{
+        textDecoration: 'none',
+        bg: selectedBg,
+      }}
+      backgroundColor={router.pathname == link.href ? selectedBg : null}
+      display="flex"
+      href={link.href}>
+      <VStack spacing={1}>{link.icon}<Text>{link.title}</Text></VStack>
+    </Link>
+  );
+};
+export default function BucketNavigation({ children }: PropsWithChildren<{}>): ReactElement {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { toggleColorMode: toggleMode } = useColorMode()
+  const text = useColorModeValue("dark", "light")
+
+  const SwitchIcon = useColorModeValue(Moon, Sun);
+  return (
+    <>
+      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4} py={2}>
+        <Flex h={16} alignItems={'center'} justifyContent={'stretch'}>
+          <IconButton
+            size={'md'}
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            aria-label={'Open Menu'}
+            display={{ md: 'none' }}
+            onClick={isOpen ? onClose : onOpen}
+          />
+          <HStack spacing={8} width="100%" px="2">
+            <Tooltip label="Linwood Bucket">
+              <Link href="/">
+                <Image src="/logo.png" alt="Picture of the author" height={56} width={56} />
+              </Link>
+            </Tooltip>
+            <Box flexGrow={1}>
               <HStack
                 as={'nav'}
                 spacing={4}
@@ -113,9 +109,22 @@ export default function BucketNavigation({children} : PropsWithChildren<{}>): Re
                   <NavLink link={link} key={link.title} />
                 ))}
               </HStack>
-              </Box>
-            </HStack>
-            {/* <Menu isLazy>
+            </Box>
+          </HStack>
+          <Box>
+            <IconButton
+              size="md"
+              fontSize="lg"
+              rounded="md"
+              aria-label={`Switch to ${text} mode`}
+              variant="ghost"
+              color="current"
+              ml={{ base: "0", md: "3" }}
+              onClick={toggleMode}
+              icon={<SwitchIcon size={24} />}
+            />
+          </Box>
+          {/* <Menu isLazy>
               <MenuButton
                 as={Button}
                 rounded={'full'}
@@ -135,20 +144,24 @@ export default function BucketNavigation({children} : PropsWithChildren<{}>): Re
                 <MenuItem>Link 3</MenuItem>
               </MenuList>
             </Menu> */}
-          </Flex>
-  
-          {isOpen ? (
-            <Box pb={4} display={{ md: 'none' }}>
-              <Stack as={'nav'} spacing={4}>
-                {Links.map((link) => (
-                  <NavLink link={link} key={link.title} />
-                ))}
-              </Stack>
-            </Box>
-          ) : null}
-        </Box>
-  
-        <Box p={4}>{children}</Box>
-        </>
-    );
+        </Flex>
+
+        {isOpen ? (
+          <Box pb={4} display={{ md: 'none' }}>
+            <Stack as={'nav'} spacing={4}>
+              {Links.map((link) => (
+                <NavLink link={link} key={link.title} />
+              ))}
+            </Stack>
+          </Box>
+        ) : null}
+      </Box>
+
+      <Box p={4}>{children}</Box>
+    </>
+  );
 }
+function FaMoon(FaMoon: any, FaSun: any) {
+  throw new Error('Function not implemented.');
+}
+
