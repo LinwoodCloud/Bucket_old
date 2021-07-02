@@ -4723,6 +4723,15 @@ next@latest:
   languageName: node
   linkType: hard
 
+"phosphor-react@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "phosphor-react@npm:1.2.1"
+  peerDependencies:
+    react: ">=16"
+  checksum: fc11e2bc5a495b441666f9bb5b29dabd61e4f082e3db35c8bd2ea4d32fbce046397e3b61a5c5ff6a367c2454304c852d01d1eebc81fa32c9b48ca681f16c9d1b
+  languageName: node
+  linkType: hard
+
 "picomatch@npm:^2.0.4, picomatch@npm:^2.2.1, picomatch@npm:^2.2.3":
   version: 2.3.0
   resolution: "picomatch@npm:2.3.0"
@@ -6290,6 +6299,7 @@ typescript@^4.3.5:
     eslint-config-next: ^11.0.1
     framer-motion: ^4
     next: latest
+    phosphor-react: ^1.2.1
     react: ^17.0.2
     react-dom: ^17.0.2
     typescript: ^4.3.5
