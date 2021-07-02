@@ -18,9 +18,9 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 
-const Links = ['Dashboard', 'Projects', 'Team'];
+const Links = ['Home', 'Wiki', 'Source', 'Account'];
 
-const NavLink = ({ children }: { children: ReactNode }) => (
+const NavLink = ({ children }: { children: ReactNode }): ReactElement => (
   <Link
     px={2}
     py={1}
@@ -54,9 +54,17 @@ export default function withAction() {
               as={'nav'}
               spacing={4}
               display={{ base: 'none', md: 'flex' }}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
+              <Menu>
+                <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                  Resources
+                </MenuButton>
+                <MenuList>
+                  <MenuItem>Assets</MenuItem>
+                  <MenuItem>Collections</MenuItem>
+                  <MenuItem>Types</MenuItem>
+                  <MenuItem>Authors</MenuItem>
+                </MenuList>
+              </Menu>
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
