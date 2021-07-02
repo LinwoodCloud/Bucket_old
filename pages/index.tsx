@@ -1,5 +1,4 @@
 import { Button, Flex, Heading, Input, useColorMode, useColorModeValue } from '@chakra-ui/react';
-import Link from 'next/link'
 import React from 'react';
 
 const IndexPage = () => {
