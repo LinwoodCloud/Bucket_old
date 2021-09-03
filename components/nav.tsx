@@ -41,11 +41,6 @@ const Links: BucketLink[] = [
     "href": "/assets"
   },
   {
-    "title": "Collections",
-    "icon": (<Bag size={24} />),
-    "href": "/collections"
-  },
-  {
     "title": "Authors",
     "icon": (<User size={24} />),
     "href": "/authors"
@@ -160,8 +155,5 @@ export default function BucketNavigation({ children }: PropsWithChildren<{}>): R
       <Box p={4}>{children}</Box>
     </>
   );
-}
-function FaMoon(FaMoon: any, FaSun: any) {
-  throw new Error('Function not implemented.');
 }
 
