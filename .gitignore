@@ -45,10 +45,3 @@ yarn-error.log*
 .idea
 *.iml
 
-# PWA
-
-**/public/workbox-*.js
-**/public/workbox-*.js.map
-**/public/sw.js
-**/public/sw.js.map
-**/public/fallback-*.js

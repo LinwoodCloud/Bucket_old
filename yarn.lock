@@ -395,7 +395,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chakra-ui/input@npm:1.2.10":
+"@chakra-ui/input@npm:1.2.10, @chakra-ui/input@npm:^1.2.10":
   version: 1.2.10
   resolution: "@chakra-ui/input@npm:1.2.10"
   dependencies:
@@ -409,7 +409,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chakra-ui/layout@npm:1.4.9":
+"@chakra-ui/layout@npm:1.4.9, @chakra-ui/layout@npm:^1.4.9":
   version: 1.4.9
   resolution: "@chakra-ui/layout@npm:1.4.9"
   dependencies:
@@ -4239,6 +4239,8 @@ fsevents@~2.3.1:
   resolution: "linwood-bucket@workspace:."
   dependencies:
     "@chakra-ui/icons": ^1.0.15
+    "@chakra-ui/input": ^1.2.10
+    "@chakra-ui/layout": ^1.4.9
     "@chakra-ui/portal": ^1.2.9
     "@chakra-ui/react": ^1.6.7
     "@chakra-ui/react-env": ^1.0.6
