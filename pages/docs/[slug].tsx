@@ -19,28 +19,6 @@ import { List, Moon, Sun } from 'phosphor-react';
 import DocsElement, { getDocs } from '../../lib/docs';
 import markdownToHtml from '../../lib/markdownToHtml';
 
-export async function getStaticPaths() {
-    return {
-        paths: getDocs().map((doc) => {
-            return { params: { slug: doc.slug } };
-        }),
-        fallback: false,
-    };
-}
-
-export async function getStaticProps({ params }) {
-    var docs = getDocs();
-    var page = docs.find((doc) => doc.slug === params.slug);
-    const content = await markdownToHtml(page.content || '')
-    page['content'] = content;
-    return {
-        props: {
-            page: page,
-            pages: docs
-        }
-    };
-}
-
 interface LinkItemProps {
     name: string;
     href: string;
@@ -50,7 +28,7 @@ interface DocsProps {
     pages: Array<DocsElement>;
 }
 
-export default function DocsPage({ page, pages }: { page: DocsElement, pages : Array<DocsElement> }) {
+export default function DocsPage({ page, pages }: { page: DocsElement, pages: Array<DocsElement> }) {
     const { isOpen, onOpen, onClose } = useDisclosure();
     return (
         <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
@@ -140,7 +118,7 @@ const NavItem = ({ name, href, ...rest }: NavItemProps) => {
                 borderRadius="lg"
                 role="group"
                 cursor="pointer"
-                backgroundColor={router.asPath == href ? selectedBg : null}
+                backgroundColor={router.asPath == href ? selectedBg : undefined}
                 _hover={{
                     textDecoration: 'none',
                     bg: selectedBg,
@@ -180,3 +158,25 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
         </Flex>
     );
 };
+
+export async function getStaticPaths() {
+    return {
+        paths: getDocs().filter((doc) => doc.slug != "").map((doc) => {
+            return { params: { slug: doc.slug } };
+        }),
+        fallback: false,
+    };
+}
+
+export async function getStaticProps({ params }) {
+    var docs = getDocs();
+    var page = docs.find((doc) => doc.slug === params.slug)!;
+    const content = await markdownToHtml(page?.content || '')
+    page['content'] = content;
+    return {
+        props: {
+            page: page,
+            pages: docs
+        }
+    };
+}

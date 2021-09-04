@@ -1203,10 +1203,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:11.1.2":
-  version: 11.1.2
-  resolution: "@next/env@npm:11.1.2"
-  checksum: df7a95e840af351b1c37fa6490b2c6330b8f8c587ff8b2212687d7557e99ae5642495095a9a3a15fe4ac2e6fb5b1cdb24ab8fb14e95ad363a5b7b1146ec62d15
+"@next/env@npm:11.1.3-canary.7":
+  version: 11.1.3-canary.7
+  resolution: "@next/env@npm:11.1.3-canary.7"
+  checksum: e05439348944872c116981c57b7acbe7370232594f3a03f24a8fb7e6a26a13041e2430a87b8803d0867708b8a26c539ffbfaeb3f85461a880e3f8d6a672c7427
   languageName: node
   linkType: hard
 
@@ -1219,16 +1219,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/polyfill-module@npm:11.1.2":
-  version: 11.1.2
-  resolution: "@next/polyfill-module@npm:11.1.2"
-  checksum: f739b999b740ed55e5b5e45ba22127e4abba10ef3816df41277f13b23764005d88dfa4e914d06b6a4b321ba9c6b3df21d5b680d36c12f5db304128000130dc4d
+"@next/polyfill-module@npm:11.1.3-canary.7":
+  version: 11.1.3-canary.7
+  resolution: "@next/polyfill-module@npm:11.1.3-canary.7"
+  checksum: 37d73c53080998426b5dd3590beecde9debab37e1c00b71a8262c3425b7ff8079beb3a649b7ccbdd87ccf687c8a9b16f457cf7903149f11a3f2b4f3ff6268381
   languageName: node
   linkType: hard
 
-"@next/react-dev-overlay@npm:11.1.2":
-  version: 11.1.2
-  resolution: "@next/react-dev-overlay@npm:11.1.2"
+"@next/react-dev-overlay@npm:11.1.3-canary.7":
+  version: 11.1.3-canary.7
+  resolution: "@next/react-dev-overlay@npm:11.1.3-canary.7"
   dependencies:
     "@babel/code-frame": 7.12.11
     anser: 1.4.9
@@ -1244,48 +1244,48 @@ __metadata:
   peerDependencies:
     react: ^17.0.2
     react-dom: ^17.0.2
-  checksum: 6b2215c90c6df5f7b96eec9235e7a0a0ea71d7c7501e25aa6a7004c064ca74a6eaf15b2661fe3cbe8aff417ebebb705df2dbbf252aec4a92b408f2c02891a983
+  checksum: 0fb0d330860312ee403b0b6e770a8fab60f90dde6a681ae7f1b72bce7d8a96888f14cc8ae635259f4a14d8e79a2708dce285abd1fb21c8a3a5ae3eca588a5685
   languageName: node
   linkType: hard
 
-"@next/react-refresh-utils@npm:11.1.2":
-  version: 11.1.2
-  resolution: "@next/react-refresh-utils@npm:11.1.2"
+"@next/react-refresh-utils@npm:11.1.3-canary.7":
+  version: 11.1.3-canary.7
+  resolution: "@next/react-refresh-utils@npm:11.1.3-canary.7"
   peerDependencies:
     react-refresh: 0.8.3
     webpack: ^4 || ^5
   peerDependenciesMeta:
     webpack:
       optional: true
-  checksum: 443e2376279437d85b991175b8cd86fc1d0f3908ad23a523e7ede5dc9fb22f63d083a904502f6aef77af4769c96f165740fe196d54684136b1f3443561575fc1
+  checksum: 4c354435e0af72820f37e0ccb955510e6cd085f8f10a050606d2d04e6362c59bbe122bad22df2fae021b80e7b557d1f0e21851e875c8d9af792a9c30e1080cab
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:11.1.2":
-  version: 11.1.2
-  resolution: "@next/swc-darwin-arm64@npm:11.1.2"
-  checksum: e87481c2d1436e947f1101d4d3e45bc9486f3dc312d120a6042b4a2333f16150b3881f322103ef52431e09178093775b02d725b843a7dde441f3ee319495ec95
+"@next/swc-darwin-arm64@npm:11.1.3-canary.7":
+  version: 11.1.3-canary.7
+  resolution: "@next/swc-darwin-arm64@npm:11.1.3-canary.7"
+  checksum: db08285c6851af04aae295170a7239e0fdc2b1327e1c84de43dd821080427aaa983acd4c52bd9b65d4eebfffaaaa69fab6b946de0cc8b5c76e9a4401bb240acd
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:11.1.2":
-  version: 11.1.2
-  resolution: "@next/swc-darwin-x64@npm:11.1.2"
-  checksum: 74717c27d2dd8e16ed6221ebc1fd0e212ffe467cc77dcd70f61b5ed9763b64dff36e6b3745791bc01771a2df9b60e609393d8ef848d894464cc15d45641a34f8
+"@next/swc-darwin-x64@npm:11.1.3-canary.7":
+  version: 11.1.3-canary.7
+  resolution: "@next/swc-darwin-x64@npm:11.1.3-canary.7"
+  checksum: b4ec65b675d0872a6b2efaf27be97466400b1c385428995778585c0b08bc4c42177571916645365bce5f29930a6ba4435b8a0cfc1a94b3af2c9c87df0523adfb
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:11.1.2":
-  version: 11.1.2
-  resolution: "@next/swc-linux-x64-gnu@npm:11.1.2"
-  checksum: 7cf8cf47cf007f7f1101fddb9850c03297950f84acc25b2b6ae2bce9f8ee860671adebde6c61df3cf721a50ec985304a98ea2ba7a5b594fd22032ae5f5cade02
+"@next/swc-linux-x64-gnu@npm:11.1.3-canary.7":
+  version: 11.1.3-canary.7
+  resolution: "@next/swc-linux-x64-gnu@npm:11.1.3-canary.7"
+  checksum: 3acf5e26441efcb760088467117d2927e3c8c9b2b16c2f350c9b61d889348abbf724453557e0a36b9882c63b05ad6896072ca46fdb0cdef060a173eb2f724119
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:11.1.2":
-  version: 11.1.2
-  resolution: "@next/swc-win32-x64-msvc@npm:11.1.2"
-  checksum: dec45ee30bf9edc8d46a59fa9c1c9fcf00352ab02f5e9ff3cfde3d83cc47aa2be2615ac47142495e63419bd6764a25d2f5a73190d261293dc959fe94de14e9e5
+"@next/swc-win32-x64-msvc@npm:11.1.3-canary.7":
+  version: 11.1.3-canary.7
+  resolution: "@next/swc-win32-x64-msvc@npm:11.1.3-canary.7"
+  checksum: 4a84c0792a903cec2af487d760f697c5993a47f81800af6c17cce6f4ec9381a9ddadcf3d32ab7c8e1c3fb6f3c40131d501e6dd3801e69f68ff2b273bdf76adc2
   languageName: node
   linkType: hard
 
@@ -4254,7 +4254,7 @@ fsevents@~2.3.1:
     eslint-config-next: ^11.1.2
     framer-motion: ^4.1.17
     gray-matter: ^4.0.3
-    next: ^11.1.2
+    next: ^11.1.3-canary.7
     phosphor-react: ^1.3.1
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -4897,20 +4897,20 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"next@npm:^11.1.2":
-  version: 11.1.2
-  resolution: "next@npm:11.1.2"
+"next@npm:^11.1.3-canary.7":
+  version: 11.1.3-canary.7
+  resolution: "next@npm:11.1.3-canary.7"
   dependencies:
     "@babel/runtime": 7.15.3
     "@hapi/accept": 5.0.2
-    "@next/env": 11.1.2
-    "@next/polyfill-module": 11.1.2
-    "@next/react-dev-overlay": 11.1.2
-    "@next/react-refresh-utils": 11.1.2
-    "@next/swc-darwin-arm64": 11.1.2
-    "@next/swc-darwin-x64": 11.1.2
-    "@next/swc-linux-x64-gnu": 11.1.2
-    "@next/swc-win32-x64-msvc": 11.1.2
+    "@next/env": 11.1.3-canary.7
+    "@next/polyfill-module": 11.1.3-canary.7
+    "@next/react-dev-overlay": 11.1.3-canary.7
+    "@next/react-refresh-utils": 11.1.3-canary.7
+    "@next/swc-darwin-arm64": 11.1.3-canary.7
+    "@next/swc-darwin-x64": 11.1.3-canary.7
+    "@next/swc-linux-x64-gnu": 11.1.3-canary.7
+    "@next/swc-win32-x64-msvc": 11.1.3-canary.7
     "@node-rs/helper": 1.2.1
     assert: 2.0.0
     ast-types: 0.13.2
@@ -4979,7 +4979,7 @@ fsevents@~2.3.1:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: c5a6d01b6d60de6e94bed11b199b8adb656521fed4abe0e816bec7991e8ff435006ef226ded40a0aecd277aa79e7d520e047c24bfb01521a12905b246ddd9177
+  checksum: 3c382123b19c0f7350b184e380f6ab7530e7b2ff2463a2e40b95ed6a0338881e64dadab1ca32e4f62d5510b07492980f6c8fa89aa40c5436f6bfb547b843ef78
   languageName: node
   linkType: hard
 

@@ -66,7 +66,7 @@ const NavLink = ({ link }: { link: BucketLink }): ReactElement => {
         textDecoration: 'none',
         bg: selectedBg,
       }}
-      backgroundColor={router.pathname == link.href ? selectedBg : null}
+      backgroundColor={router.asPath == link.href ? selectedBg : undefined}
       display="flex">
       <VStack spacing={1}>{link.icon}<Text>{link.title}</Text></VStack>
     </Link>
