@@ -1,23 +1,12 @@
-import { getDocs } from '../../lib/docs';
+import { getDocPage, getDocs } from '../../lib/docs';
+import DocsPage from './[slug]';
 
-
-export async function getStaticProps() {
-    return {
-        props: {
-            docs: JSON.stringify(getDocs())
-        }
-    };
-}
-
-
-const DocsPage = ({ docs }: { docs: string }) => {
-    return (
-        <div className="page">
-            <h1>Docs</h1>
-            <p>
-                {"Entries: " + docs}
-            </p>
-        </div>
-    );
-}
 export default DocsPage;
+export async function getStaticProps({ params }) {
+  return {
+      props: {
+          page: getDocPage(''),
+          pages: getDocs()
+      },
+  };
+}

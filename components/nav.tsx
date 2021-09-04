@@ -15,7 +15,7 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import Image from 'next/image';
-import { House, User, Bell, Cube, Sun, Moon } from 'phosphor-react';
+import { House, User, Bell, Cube, Sun, Moon, Book } from 'phosphor-react';
 import { useRouter } from 'next/router';
 
 
@@ -45,6 +45,11 @@ const Links: BucketLink[] = [
     "title": "Notifications",
     "icon": (<Bell size={24} />),
     "href": "/notifications"
+  },
+  {
+    "title": "Docs",
+    "icon": (<Book size={24} />),
+    "href": "/docs"
   }
 ];
 const NavLink = ({ link }: { link: BucketLink }): ReactElement => {
