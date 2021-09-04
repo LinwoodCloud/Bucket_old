@@ -1701,7 +1701,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chakra-ui/portal@npm:1.2.9":
+"@chakra-ui/portal@npm:1.2.9, @chakra-ui/portal@npm:^1.2.9":
   version: 1.2.9
   resolution: "@chakra-ui/portal@npm:1.2.9"
   dependencies:
@@ -1761,7 +1761,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chakra-ui/react-env@npm:1.0.6":
+"@chakra-ui/react-env@npm:1.0.6, @chakra-ui/react-env@npm:^1.0.6":
   version: 1.0.6
   resolution: "@chakra-ui/react-env@npm:1.0.6"
   dependencies:
@@ -5971,7 +5971,9 @@ __metadata:
   resolution: "linwood-bucket@workspace:."
   dependencies:
     "@chakra-ui/icons": ^1.0.15
+    "@chakra-ui/portal": ^1.2.9
     "@chakra-ui/react": ^1.6.7
+    "@chakra-ui/react-env": ^1.0.6
     "@chakra-ui/system": ^1.7.3
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
@@ -8899,11 +8901,11 @@ typescript@^4.4.2:
 
 "typescript@patch:typescript@^4.4.2#~builtin<compat/typescript>":
   version: 4.4.2
-  resolution: "typescript@patch:typescript@npm%3A4.4.2#~builtin<compat/typescript>::version=4.4.2&hash=d8b4e7"
+  resolution: "typescript@patch:typescript@npm%3A4.4.2#~builtin<compat/typescript>::version=4.4.2&hash=32657b"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 11d6ab6e868117908c388401e2ac06d503c5c8709115ab80ee69a1a6352c1f98471d1e595636bfe6a2d6b20b03a44df6bb2d3d198cea97c0c328968cd18d2b70
+  checksum: 3109ae25705746996007161cdd3271857db4f40356b894e34d4cabc216bf9e251f53e0bb6e48df2450b5e3fd948dcbee716a616a4ad4cf7251292025e6163cb1
   languageName: node
   linkType: hard
 

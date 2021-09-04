@@ -11,16 +11,12 @@ import {
   Stack,
   Tooltip,
   useColorMode,
-  Switch,
-  FormControl,
-  FormLabel,
   VStack
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import Image from 'next/image';
-import { House, Bag, User, Bell, Code, Cube } from 'phosphor-react';
-import { useRouter } from 'next/router'
-import { Sun, Moon } from 'phosphor-react';
+import { House, User, Bell, Cube, Sun, Moon } from 'phosphor-react';
+import { useRouter } from 'next/router';
 
 
 interface BucketLink {
@@ -56,6 +52,7 @@ const NavLink = ({ link }: { link: BucketLink }): ReactElement => {
   const router = useRouter();
   return (
     <Link
+      onClick={() => router.push(link.href)}
       justifyContent="center"
       px={3}
       py={1}
@@ -65,8 +62,7 @@ const NavLink = ({ link }: { link: BucketLink }): ReactElement => {
         bg: selectedBg,
       }}
       backgroundColor={router.pathname == link.href ? selectedBg : null}
-      display="flex"
-      href={link.href}>
+      display="flex">
       <VStack spacing={1}>{link.icon}<Text>{link.title}</Text></VStack>
     </Link>
   );
