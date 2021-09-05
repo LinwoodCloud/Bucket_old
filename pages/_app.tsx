@@ -1,7 +1,8 @@
-import '../styles/globals.css'
+import '../styles/globals.sass'
 import type { AppProps } from 'next/app'
 import { ChakraProvider } from '@chakra-ui/react';
 import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {

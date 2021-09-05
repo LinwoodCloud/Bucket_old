@@ -15,9 +15,11 @@ import {
     useColorMode,
 } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+
 import { List, Moon, Sun } from 'phosphor-react';
 import DocsElement, { getDocs } from '../../lib/docs';
-import markdownToHtml from '../../lib/markdownToHtml';
 
 interface LinkItemProps {
     name: string;
@@ -52,8 +54,10 @@ export default function DocsPage({ page, pages }: { page: DocsElement, pages: Ar
             </Drawer>
             {/* mobilenav */}
             <MobileNav display={{ base: 'flex', md: 'none' }} onOpen={onOpen} />
-            <Box ml={{ base: 0, md: 60 }} p="4">
-                <div dangerouslySetInnerHTML={{ __html: page.content }} />
+            <Box ml={{ base: 0, md: 60 }} p="4" className="markdown">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    {page.content}
+                </ReactMarkdown>
             </Box>
         </Box>
     );
@@ -121,7 +125,7 @@ const NavItem = ({ name, href, ...rest }: NavItemProps) => {
                 backgroundColor={router.asPath == href ? selectedBg : undefined}
                 _hover={{
                     textDecoration: 'none',
-                    bg: selectedBg,
+                    bg: useColorModeValue('gray.300', 'gray.600'),
                 }}
                 {...rest}>
                 {name}
@@ -171,8 +175,6 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
     var docs = getDocs();
     var page = docs.find((doc) => doc.slug === params.slug)!;
-    const content = await markdownToHtml(page?.content || '')
-    page['content'] = content;
     return {
         props: {
             page: page,
