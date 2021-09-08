@@ -11,7 +11,7 @@ interface Props {
 
 export default function Card({ title, description, href }: Props): ReactElement {
     return (
-        <LinkBox maxW="sm" p="5" borderWidth="1px" rounded="md">
+        <LinkBox p="5" borderWidth="1px" rounded="md">
             <Heading size="md">
                 <NextLink href={href} passHref>
                     <LinkOverlay>{title}</LinkOverlay>

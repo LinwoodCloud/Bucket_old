@@ -1536,10 +1536,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^16.7.10":
-  version: 16.7.10
-  resolution: "@types/node@npm:16.7.10"
-  checksum: 0518803caa1a14f4070e770a280eda1c4b4581a425cbda481cdd54b1f34a7ea497ff067fd23b90e3d4f4fdcfba15c1316182875e9cf9f5b2e880de1e595de053
+"@types/node@npm:^16.7.13":
+  version: 16.7.13
+  resolution: "@types/node@npm:16.7.13"
+  checksum: 15dc28aa44674d3f49dcca4a6523b6ab1ef9bbea5c659057bec13153e1873718d6b62ab0ea57a3d57ee37f0f1136ae30e3ea503df43b0afa3ae437c8750be7f5
   languageName: node
   linkType: hard
 
@@ -1584,14 +1584,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^17.0.19":
-  version: 17.0.19
-  resolution: "@types/react@npm:17.0.19"
+"@types/react@npm:^17.0.20":
+  version: 17.0.20
+  resolution: "@types/react@npm:17.0.20"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: d5af52623dd863e5a9f64eb72979f19c21e03012e25ee93adc93f664ed7976e81b654128dc653b225ad5ba2aaae24e0febe37face272bb051d6289e23ed7177d
+  checksum: e342bfaa4fe052fc3a445ea49f746f3fd82cfc9c8028eae139a3e0763ead1871f353bd40da2a472f23d2b52544d2781d40e3159c0703e7e2ff08c13f067a3b9c
   languageName: node
   linkType: hard
 
@@ -1819,7 +1819,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/pnpify@npm:^3.0.1-rc.2":
+"@yarnpkg/pnpify@npm:^3.0.1":
   version: 3.0.1
   resolution: "@yarnpkg/pnpify@npm:3.0.1"
   dependencies:
@@ -4830,11 +4830,11 @@ __metadata:
     "@chakra-ui/system": ^1.7.3
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
-    "@types/node": ^16.7.10
-    "@types/react": ^17.0.19
+    "@types/node": ^16.7.13
+    "@types/react": ^17.0.20
     "@types/react-dom": ^17.0.9
     "@types/sass": ^1
-    "@yarnpkg/pnpify": ^3.0.1-rc.2
+    "@yarnpkg/pnpify": ^3.0.1
     chakra-ui-markdown-renderer: ^3.0.1
     eslint: ^7.32.0
     eslint-config-next: ^11.1.2
@@ -4847,7 +4847,7 @@ __metadata:
     react-markdown: ^7.0.1
     remark: ^14.0.1
     remark-gfm: ^2.0.0
-    remark-html: ^14.0.0
+    remark-html: ^14.0.1
     remark-preset-lint-recommended: ^6.0.1
     sass: ^1.39.0
     typescript: ^4.4.2
@@ -6891,16 +6891,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"remark-html@npm:^14.0.0":
-  version: 14.0.0
-  resolution: "remark-html@npm:14.0.0"
+"remark-html@npm:^14.0.1":
+  version: 14.0.1
+  resolution: "remark-html@npm:14.0.1"
   dependencies:
     "@types/mdast": ^3.0.0
     hast-util-sanitize: ^4.0.0
     hast-util-to-html: ^8.0.0
     mdast-util-to-hast: ^11.0.0
     unified: ^10.0.0
-  checksum: 5677ed98e7e58bf1af19fab0d92f60928fbbabd15f343d154c7a3aa9b5f2e6f6e2da1afe58d661ee51e8dd8ff73d9744b239303104f372f6dd8a9dd3e3700477
+  checksum: 5d689b05dc6b4f24e08ece07aabca98685949198a8b6ceacb2fbf7fba8f45f55cea5623caddfd92aaf6e6f082bc1c93797dfb82dc48a6f6e1c5263947a4779c9
   languageName: node
   linkType: hard
 

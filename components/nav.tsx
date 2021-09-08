@@ -16,7 +16,7 @@ import {
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import Image from 'next/image';
 import { House, User, Bell, Cube, Sun, Moon, Book } from 'phosphor-react';
-import { useRouter } from 'next/router';
+import router, { useRouter } from 'next/router';
 
 
 interface BucketLink {
@@ -91,7 +91,7 @@ export default function BucketNavigation({ children }: PropsWithChildren<{}>): R
           />
           <HStack spacing={8} width="100%" px="2">
             <Tooltip label="Linwood Bucket">
-              <Link href="/">
+              <Link onClick={() => router.push("/")}>
                 <Image src="/logo.png" alt="Picture of the author" height={56} width={56} />
               </Link>
             </Tooltip>
