@@ -17,6 +17,7 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content="#EBEF35" />
           <meta name="msapplication-navbutton-color" content="#EBEF35" />
           <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+          <link rel="apple-touch-icon" href="/chrome/chrome-favicon-16-16.png" />
           <meta name="msapplication-starturl" content="/" />
         </Head>
         <body>
