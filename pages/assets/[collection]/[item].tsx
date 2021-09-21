@@ -5,6 +5,7 @@ import { Button, ButtonGroup, IconButton, Menu, MenuButton, MenuDivider, MenuIte
 import { ArrowSquareOut, Bell } from 'phosphor-react'
 import React, { ReactElement } from 'react'
 import Card from '../../../components/card'
+import NextLink from 'next/link'
 import BucketNavigation from '../../../components/nav'
 
 
@@ -35,6 +36,9 @@ export default function AssetsPage(): ReactElement {
                     <TabList>
                         <Tab>Overview</Tab>
                         <Tab>Changelog</Tab>
+                        <NextLink href="/" passHref>
+                            <Tab>Next</Tab>
+                        </NextLink>
                     </TabList>
 
                     <TabPanels>

@@ -13,7 +13,7 @@
     "@chakra-ui/input": "^1.2.10",
     "@chakra-ui/layout": "^1.4.9",
     "@chakra-ui/portal": "^1.2.9",
-    "@chakra-ui/react": "^1.6.7",
+    "@chakra-ui/react": "^1.6.8",
     "@chakra-ui/react-env": "^1.0.6",
     "@chakra-ui/system": "^1.7.3",
     "@emotion/react": "^11.4.1",
@@ -30,17 +30,17 @@
     "remark": "^14.0.1",
     "remark-gfm": "^2.0.0",
     "remark-html": "^14.0.1",
-    "remark-preset-lint-recommended": "^6.0.1",
-    "sass": "^1.39.0"
+    "remark-preset-lint-recommended": "^6.1.0",
+    "sass": "^1.42.0"
   },
   "devDependencies": {
-    "@types/node": "^16.7.13",
-    "@types/react": "^17.0.20",
+    "@types/node": "^16.9.4",
+    "@types/react": "^17.0.22",
     "@types/react-dom": "^17.0.9",
     "@types/sass": "^1",
     "eslint": "^7.32.0",
     "eslint-config-next": "^11.1.2",
-    "typescript": "^4.4.2"
+    "typescript": "^4.4.3"
   },
   "license": "MIT",
   "packageManager": "yarn@3.0.2"
