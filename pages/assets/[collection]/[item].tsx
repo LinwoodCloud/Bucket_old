@@ -1,10 +1,8 @@
 import { ChevronDownIcon } from '@chakra-ui/icons'
-import { Input } from '@chakra-ui/input'
-import { Box, Container, Flex, Heading, Stack, VStack } from '@chakra-ui/layout'
-import { Button, ButtonGroup, IconButton, Menu, MenuButton, MenuDivider, MenuItem, MenuList, Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
+import { Container, Flex, Heading } from '@chakra-ui/layout'
+import { Button, ButtonGroup, IconButton, Menu, MenuButton, MenuItem, MenuList, Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
 import { ArrowSquareOut, Bell } from 'phosphor-react'
 import React, { ReactElement } from 'react'
-import Card from '../../../components/card'
 import NextLink from 'next/link'
 import BucketNavigation from '../../../components/nav'
 
